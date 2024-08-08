@@ -80,12 +80,12 @@ const LandingPage = () => {
         <div className="container position-relative">
           <div className="row gy-5" data-aos="fade-in">
             <div className="col-lg-1 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start"></div>
-
             <div
               className="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center  text-lg-start"
-              style={{ boxShadow: '', padding: '0.3cm' }}
+              style={{ boxShadow: '', padding: '0.5cm' }}
             >
               <form onSubmit={handleSubmit} className="myform">
+                <h1 style={{ boxShadow: '',fontSize:'27px', paddingBottom: '0.5cm',backgroundColor:'whitesmoke',textAlign:'center',padding:'0.3cm'}}>Register as Customer</h1>
               <div className="row" style={{ paddingTop: '0cm' }}>
                   <div className="col-md-6 form-group">
                     <span>First name</span>

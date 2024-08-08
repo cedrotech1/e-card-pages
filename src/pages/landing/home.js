@@ -6,12 +6,12 @@ import Footer from '../../components/footer';
 
 const styles = {
   hero: {
-    height: '65vh', // Default height for medium to large devices
-    marginTop: '2.3cm',
+    height: '90vh',
+    marginTop:'2.3cm'
   },
   heading: {
+    marginTop: '0.5cm',
     fontFamily: 'monospace',
-    // padding:'1cm'
   },
   paragraph: {
     marginBottom: '1cm',
@@ -21,59 +21,32 @@ const styles = {
     textAlign: 'justify',
   },
   buttonContainer: {
-    marginTop: '1cm',
+    marginTop: '0.6cm',
   },
   getStartedButton: {
     backgroundColor: '',
     borderRadius: '6px',
     fontFamily: 'monospace',
   },
-  restaurantButton: {},
+  restaurantButton: {
+    // Add any specific styles for the restaurant button here
+  },
   footer: {
     marginTop: '-0cm',
     fontFamily: 'monospace',
   },
 };
 
-// Custom hook to adjust hero height based on screen size
-const useResponsiveHeroHeight = () => {
-  const [heroHeight, setHeroHeight] = React.useState('65vh');
-  const [heroPadingTOP, setPadingTOP] = React.useState('');
-
-  React.useEffect(() => {
-    const updateHeight = () => {
-      if (window.innerWidth < 768) {
-        setHeroHeight('100vh'); // Smaller height for mobile devices
-      } else if (window.innerWidth >= 768 && window.innerWidth < 992) {
-        setHeroHeight('75vh'); // Medium height for tablets
-        setPadingTOP('1cm');
-      } else {
-        setHeroHeight('65vh'); // Default height for larger screens
-      }
-    };
-
-    updateHeight();
-    window.addEventListener('resize', updateHeight);
-
-    return () => window.removeEventListener('resize', updateHeight);
-  }, []);
-
-  return heroHeight;
-};
-
 const LandingPage = () => {
-  const heroHeight = useResponsiveHeroHeight();
-  const heroPaddingTOP = useResponsiveHeroHeight(); // Change this line to use the correct hook value
-
   return (
     <>
       <Menu />
 
-      <section id="hero" className="hero herohome" style={{ ...styles.hero, height: heroHeight, }}>
+      <section id="hero" className="hero herohome" style={styles.hero}>
         <div className="container position-relative">
           <div className="row gy-5" data-aos="fade-in">
             <div className="col-lg-6 headx order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" style={styles.heading}>
-              <h2 className="welcame" style={{ fontSize: '35px', fontFamily: 'cursive' }}>
+              <h2 className='welcame' style={{ fontSize: '35px', fontFamily: 'cursive' }}>
                 Welcome to E-CARD restaurant system
               </h2>
               <p style={styles.paragraph}>
@@ -85,7 +58,7 @@ const LandingPage = () => {
                   Get Started
                 </a>
                 <a href="restoAdmin" className="restaurent" style={styles.restaurantButton}>
-                  Restaurant
+                  Restaurent
                 </a>
               </div>
             </div>
@@ -108,7 +81,5 @@ const LandingPage = () => {
     </>
   );
 };
-
-
 
 export default LandingPage;

@@ -11,7 +11,7 @@ const LandingPage = () => {
     <>
       <Menu />
 
-      <section id="contact" className="contact">
+      <section id="contact" className="contact" style={{height:"100vh"}}>
         <div className="container" data-aos="fade-up">
 
           <div className="section-header">

@@ -104,17 +104,34 @@ const LandingPage = () => {
           <p className='titlex'>
           <p style={{fontStyle:'italic',fontSize:'14px'}}>{obj.role}</p>
           </p>
+
+          <Nav className="flex-column">
+            {getMenu().map((menuItem, index) => (
+              <Link
+                key={index}
+                to={menuItem.to}
+                className="nav-link"
+                style={{
+                  textTransform: 'capitalize',
+                  fontFamily: 'monospace',
+                  fontStyle: 'italic',
+                  marginBottom: '10px',  
+                  display: 'flex',
+                  alignItems: 'center',
+                  whiteSpace: 'nowrap',  
+                  marginLeft:'0.5cm'
+                }}>
+      {menuItem.icon} <span style={{ marginLeft: '8px' }}>{menuItem.name}</span>
+    </Link>
+  ))}
+</Nav>
+
         </center>
       </div>
         <>
           <center>
-            <Nav className="flex-row">
-              {getMenu().map((menuItem, index) => (
-                <Link key={index} to={menuItem.to} className="nav-link" style={{textTransform:'Capitalize',fontFamily:'monospace',fontStyle:'italic',textAlign:''}}>
-                  {menuItem.icon} {menuItem.name}
-                </Link>
-              ))}
-            </Nav>
+
+
             <div className="d-flex justify-content-center">
               <Link to="/logout" className="btn-get-started1">
                 Logout

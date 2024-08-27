@@ -48,8 +48,9 @@ const LandingPage = () => {
   ];
 
   const employee = [
-    { name: 'Dashboard', icon: <BsHouseDoor />, to: '/emplyoyee_customers' },
-    { name: 'clients', icon: <BiUser />, to: '/emplyoyee_customers' },
+    { name: 'operations', icon: <BsHouseDoor />, to: '/emplyoyee_customers' },
+    { name: 'requestings', icon: <BiUser />, to: '/emplyoyee_requests' },
+    { name: 'actives cards', icon: <BiUser />, to: '/emplyoyee_actives' },
     { name: 'Settings', icon: <BiCog />, to: '/settings' },
   ];
 

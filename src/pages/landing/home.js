@@ -47,7 +47,7 @@ const LandingPage = () => {
           <div className="row gy-5" data-aos="fade-in">
             <div className="col-lg-6 headx order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" style={styles.heading}>
               <h2 className='welcame' style={{ fontSize: '35px', fontFamily: 'cursive' }}>
-                Welcome to E-CARD restaurant system
+                Welcome to E-CARD restaurant management system
               </h2>
               <p style={styles.paragraph}>
                 Welcome to our innovative dining experience! Securely enjoy meals with your personalized card. Our automated system ensures convenience and effortless reporting. Bon appétit!

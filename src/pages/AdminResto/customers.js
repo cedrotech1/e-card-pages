@@ -33,7 +33,7 @@ const Dashboard = () => {
                 <Offcanvas.Body>
                   <div className="membery">
                     <center> <img src="assets/img/profile.png" className="img-fluid imagex" alt="" style={{ height: '3cm' }} /></center>
-                    <h5 style={{ textAlign: 'center', fontFamily: 'monospace', textTransform: '', fontWeight: 'bold' }}>H.Cedrick</h5>
+                    <h5 style={{ textAlign: 'center', fontFamily: 'monospace', textTransform: '', fontWeight: 'bold' }}>S.alain</h5>
 
                     <p style={{ textAlign: 'center', fontFamily: 'monospace', marginBottom: '1cm' }}>
                       Sed autem laudantium dolores.
@@ -200,17 +200,17 @@ const Dashboard = () => {
                         <div className="row" style={{ paddingTop: '0cm' }}>
                           <div className="col-md-6 form-group">
                             <span>First name</span>
-                            <input type="text" name="name" className="form-control" id="name" placeholder="Cedrick" required style={{ marginTop: '0.1cm', backgroundColor: 'whitesmoke', border: '0px', height: '1.2cm' }} />
+                            <input type="text" name="name" className="form-control" id="name" placeholder="Alain" required style={{ marginTop: '0.1cm', backgroundColor: 'whitesmoke', border: '0px', height: '1.2cm' }} />
                           </div>
                           <div className="col-md-6 form-group mt-3 mt-md-0">
                             <span>Last Name</span>
-                            <input type="email" className="form-control" name="email" id="email" placeholder="Hakuzimana" required style={{ marginTop: '0.1cm', backgroundColor: 'whitesmoke', border: '0px', height: '1.2cm' }} />
+                            <input type="email" className="form-control" name="email" id="email" placeholder="voltaire" required style={{ marginTop: '0.1cm', backgroundColor: 'whitesmoke', border: '0px', height: '1.2cm' }} />
                           </div>
                         </div>
                         <div className="form-group mt-3">
                           <span>Email</span>
 
-                          <input style={{ marginTop: '0.3cm', backgroundColor: 'whitesmoke', border: '0px', height: '1.2cm' }} type="text" className="form-control" name="email" id="email" placeholder="cedrick@gmail.com" required />
+                          <input style={{ marginTop: '0.3cm', backgroundColor: 'whitesmoke', border: '0px', height: '1.2cm' }} type="text" className="form-control" name="email" id="email" placeholder="voltaire@gmail.com" required />
                         </div>
 
                         <div className="form-group mt-3">

@@ -129,7 +129,6 @@ const Dashboard = () => {
     setuse(e.target.value);
 
     console.log(use)
-    //   setError(null);
   };
   const [formData, setFormData] = useState({
     userid: 1,
@@ -138,10 +137,7 @@ const Dashboard = () => {
     status: 'active',
   });
 
-  // State to manage the checkbox values
 
-
-  // Event handler to update the checkbox state on checkbox change
   const handleCheckboxChange = (checkboxName) => {
     setuse((prevValues) => ({
       one: checkboxName === '1' ? 1 : 0,
@@ -228,7 +224,9 @@ const Dashboard = () => {
 
                               <p style={{ marginBottom: '0.5cm', marginTop: '0cm', fontStyle: 'bold', fontFamily: 'monospace', marginTop: '0.3cm', textAlign: 'center' }}>
 
-                                <i className="bi bi-envelope flex-shrink-0" style={{ backgroundColor: '' }}><BiEnvelope className="flex-shrink-0 bi bi-envelope flex-shrink-0" style={{ color: 'black' }} /></i>
+                                <i className="bi bi-envelope flex-shrink-0" style={{ backgroundColor: '' }}>
+                                  <BiEnvelope className="flex-shrink-0 bi bi-envelope flex-shrink-0" style={{ color: 'black' }} />
+                                  </i>
                                 &nbsp; <span>  {Cards.cardUser.email}</span><br />
                                 {/* <i className="bi bi-envelope flex-shrink-0" style={{ backgroundColor: '' }}><BiMap className="flex-shrink-0 bi bi-envelope flex-shrink-0" style={{ color: 'black' }} /></i> */}
                                 <i className="bi bi-envelope flex-shrink-0" style={{ backgroundColor: '' }}><BiPhone className="flex-shrink-0 bi bi-envelope flex-shrink-0" style={{ color: 'black' }} /></i>

@@ -65,7 +65,7 @@ const LandingPage = () => {
             </div>
             <center>
               <Nav className="flex-column">
-                <Link to="/" className="nav-link">Home</Link>
+                {/* <Link to="/" className="nav-link">Home</Link> */}
                 <Link to="/list" className="nav-link">Restaurent</Link>
                 <Link to="/mycards" className="nav-link">My Cards</Link>
                 <Link to="/profile" className="nav-link">Profile</Link>
@@ -101,11 +101,14 @@ const LandingPage = () => {
           </Link>
           <nav id="navbar" className="navbar">
             <ul>
-              <li>
+              {/* <li>
                 <Link to="/" style={{ color: 'black', fontFamily: 'monospace', fontSize: '20px' }}>Home</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/list" style={{ color: 'black', fontFamily: 'monospace', fontSize: '20px' }}>Restaurent</Link>
+              </li>
+              <li>
+                <Link to="/myrequests" style={{ color: 'black', fontFamily: 'monospace', fontSize: '20px' }}>MyRequests</Link>
               </li>
               <li>
                 <Link to="/mycards" style={{ color: 'black', fontFamily: 'monospace', fontSize: '20px' }}>MyCards</Link>

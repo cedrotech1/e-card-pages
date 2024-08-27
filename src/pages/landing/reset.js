@@ -76,7 +76,7 @@ function App() {
                 <div className="form-group mt-3">
                   <span>Email</span>
 
-                  <input type="text" className="form-control" name="email" id="email" placeholder="cedrick@gmail.com" onChange={handleChange} style={{outline: 'none'}} />
+                  <input type="text" className="form-control" name="email" id="email" placeholder="alain@gmail.com" onChange={handleChange} style={{outline: 'none'}} />
                 </div>
                 <br/>
 

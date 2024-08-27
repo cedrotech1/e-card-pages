@@ -162,7 +162,7 @@ const Dashboard = () => {
                           <p style={{ marginBottom: '0.5cm', marginTop: '0cm', fontStyle: 'bold', fontFamily: 'monospace', marginTop: '1cm' }}>
 
                             <i className="bi bi-envelope flex-shrink-0" style={{ backgroundColor: 'white' }}><BiEnvelope className="flex-shrink-0 bi bi-envelope flex-shrink-0" style={{ color: 'black' }} /></i>
-                            &nbsp; <span>  cedrickhakuzimana@gmail.com</span><br />
+                            &nbsp; <span>  alainvoltaire@gmail.com</span><br />
                             <i className="bi bi-envelope flex-shrink-0" style={{ backgroundColor: 'white' }}><BiPhone className="flex-shrink-0 bi bi-envelope flex-shrink-0" style={{ color: 'black' }} /></i>
 
                             &nbsp; <span> 07853435654</span><br />

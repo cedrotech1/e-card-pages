@@ -280,10 +280,7 @@ const Dashboard = () => {
 
                         <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" style={{ marginTop: '0cm', fontFamily: 'monospace' }}>
                           <div className="row" style={{ marginBottom: '0.5cm' }}>
-
-
                             <div className="col-xl-6 col-md-6" style={{ padding: '0.4cm' }}>
-
                               <input
                                 placeholder='Filter customers...'
                                 variant=""
@@ -305,13 +302,8 @@ const Dashboard = () => {
                                   border: '0px',
                                 }}
                               />
-
-
-
                             </div>
                             <div className="col-xl-6 col-md-6" >
-                              {/* <h6 style={{ textAlign: 'center', paddingBottom: '0.5cm', color: 'gray' }}>LIST OF CARD CUSTOMERS </h6> */}
-
                             </div>
 
                           </div>
@@ -343,7 +335,8 @@ const Dashboard = () => {
                                         <h4 style={{ textAlign: 'center' }}>{Customer.firstname} &nbsp;{Customer.lastname}</h4>
                                         <p style={{ textAlign: 'center', fontStyle: 'italic', fontPalette: '13px', backgroundColor: 'whitesmoke', padding: '0.4cm', marginTop: '20px', borderRadius: '6px' }}>
                                           <BiMap className="" style={{ color: 'black' }} />&nbsp;&nbsp;{Customer.address} <br />
-                                          <BiEnvelope className="flex-shrink-0 bi bi-envelope flex-shrink-0" style={{ color: 'black' }} />&nbsp;&nbsp;{Customer.email} <br />
+                                          {/* <BiEnvelope className="flex-shrink-0 bi bi-envelope flex-shrink-0" style={{ color: 'black' }} /> */}
+                                          {Customer.email} <br />
                                           <BiPhone />&nbsp;&nbsp;{Customer.phone}
                                         </p>
 

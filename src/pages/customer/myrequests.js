@@ -5,6 +5,8 @@ import Menu from '../../components/customerM';
 import Footer from '../../components/footer';
 import { BiEnvelope, BiPhone, BiMap } from 'react-icons/bi'; 
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -22,7 +24,7 @@ const LandingPage = () => {
 
       const fetchCards = async () => {
         try {
-          const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/card/mycard/${ID}`, {
+          const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/card/myrequestcard/${ID}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -73,6 +75,39 @@ const LandingPage = () => {
     navigate(`../history/${id}`);
   };
 
+
+  const handleDeleteCard = async (e, cardId) => {
+    e.stopPropagation(); // Prevents the click event from bubbling up to the parent div
+  
+    const confirmDelete = window.confirm('Are you sure you want to delete this card?');
+    if (!confirmDelete) return;
+  
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/card/delete/${cardId}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      const data = await response.json();
+      if (data.success) {
+        setCards(prevCards => prevCards.filter(card => card.id !== cardId));
+        toast.success('Card deleted successfully');
+      } else {
+        console.error('Failed to delete card:', data.message);
+        // alert('Failed to delete card');
+        toast.error(data.message);
+        
+      }
+    } catch (error) {
+      console.error('Error deleting card:', error);
+      toast.error('Error deleting card');
+    }
+  };
+  
+
   return (
     <>
       <Menu />
@@ -81,7 +116,7 @@ const LandingPage = () => {
           <div className="row gy-5" data-aos="fade-in">
             <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
               <h5 style={{ fontSize: '35px', fontStyle: 'bold'}}>
-                <b>LIST OF  <span className='apart' style={{color:'#f38a7a'}}>MY CARDS</span> </b>
+                <b>LIST OF  <span className='apart' style={{color:'#f38a7a'}}>REQUESTING CARDS</span> </b>
               </h5>
             </div>
             <div className="col-lg-6 order-1 order-lg-2"></div>
@@ -107,17 +142,20 @@ const LandingPage = () => {
                 cards.map((card) => (
                   <div onClick={() => handleView(card.id)} key={card.id} className="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay={100 * card.id} style={{ padding: '' }}>
                     <div className="member col-xl-12" style={{padding:"0.4cm"}}>
-                      <img src='/assets/img/card7.png' className="img-fluid" alt="" style={{ height: 'auto', padding: '0px', width: '100%', borderRadius: '7px' }} />
+                      <img src='/assets/img/card.png' className="img-fluid" alt="" style={{ height: 'auto', padding: '0px', width: '100%', borderRadius: '7px' }} />
                       {card.cardUser && (
+                        <>
                         <div>
                           <strong>Restaurant:</strong> {card.categories?.resto?.name || 'N/A'}<br />
                           <strong>Card category:</strong> {card.categories?.name || 'N/A'}<br />
-                          <strong>Duration:</strong> {card.times || 'N/A'} times remain<br />
+                          <strong>Duration:</strong> {card.times || 'N/A'} times<br />
                           <strong>Date:</strong> {new Date(card.createdAt).toLocaleDateString() || 'N/A'}
                         </div>
-                      )}
+
+                        <button onClick={(e) => handleDeleteCard(e, card.id)} style={{ marginTop: '10px', backgroundColor: '#f38a7a', color: 'white', width:'70%', borderRadius: '5px', border:'0px', padding: '5px 10px' }}>Cancil request</button>
+                        </> )}
                       <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '13px', backgroundColor: '#faead1', padding: '0.4cm', marginTop: '20px', borderRadius: '6px' }}>
-                      <BiMap style={{ color: 'black' }} />&nbsp;&nbsp;{card.categories.resto.address || 'N/A'} <br />
+                        <BiMap style={{ color: 'black' }} />&nbsp;&nbsp;{card.categories.resto.address || 'N/A'} <br />
                         <BiEnvelope style={{ color: 'black' }} />&nbsp;&nbsp;{card.categories.resto.email} <br />
                         <BiPhone />&nbsp;&nbsp;{card.categories.resto.phone} 
                       </p>
@@ -146,6 +184,7 @@ const LandingPage = () => {
 
    
       <Footer />
+      <ToastContainer />
     </>
   );
 };

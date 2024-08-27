@@ -23,10 +23,10 @@ const LandingPage = () => {
         <div className="col-lg-4 order-1 order-lg-2 text-center text-lg-right d-flex justify-content-center justify-content-lg-end">
           <ul>
           <li> 
-  <a href="tel:+0783945908">0784366616</a>
-</li>
+              <a href="tel:+0783945908">0783945908</a>
+            </li>
 
-            <li>Cedrick Hakuzimana</li>
+            <li>Alain Voltaire</li>
             <li>Owner and developer </li>
           </ul>
         </div>

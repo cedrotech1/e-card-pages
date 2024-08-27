@@ -21,6 +21,7 @@ import Details from "./pages/customer/RestoDetails";
 import OneRes from "./pages/customer/oneres";
 import Confirm from "./pages/customer/confirms";
 import Mycards from "./pages/customer/mycards";
+import MyRequest from "./pages/customer/myrequests";
 import History from "./pages/customer/cardHistory";
 import Prof from "./pages/customer/user-profile";
 
@@ -48,10 +49,13 @@ import Has from "./pages/employee/meal_card";
 import Not from "./pages/employee/meal_card_not";
 import View from "./pages/employee/CustomerReqest";
 import Confirmx from "./pages/employee/customers_confirm";
+import Requests from "./pages/employee/requesting";
+import Actives from "./pages/employee/active";
 import EmployeeStatistic from "./pages/employee/statistics";
 // import OneRestoa from "./pages/AdminResto/oneResto";
 
-
+// emplyoyee_requests
+// emplyoyee_actives
 // Main App component
 function App() {
   return (
@@ -79,6 +83,7 @@ function App() {
         <Route path="/one/:id" element={<OneRes />} exact={true} />
         <Route path="/confirm" element={<Confirm />} exact={true} />
         <Route path="/mycards" element={<Mycards />} exact={true} />
+        <Route path="/myrequests" element={<MyRequest/>} exact={true} />
         <Route path="/history/:id" element={<History />} exact={true} />
         <Route path="/profile" element={<Prof />} exact={true} />
         <Route path="*" element={<NotFound />} />
@@ -97,6 +102,8 @@ function App() {
         <Route path="/employee_statistics" element={<EmployeeStatistic />} exact={true} />
         <Route path="/emplyoyee_meal_card/:id" element={<Has />} exact={true} />
         <Route path="/emplyoyee_meal_cardx/:id" element={<Not />} exact={true} />
+        <Route path="/emplyoyee_requests" element={<Requests/>} exact={true} />
+        <Route path="/emplyoyee_actives" element={<Actives/>} exact={true} />
         {/* Admin Resto Pages */}
         <Route path="/resto_dash" element={<Dasha />} exact={true} />
         <Route path="/resto_card/" element={<Card />} exact={true} />

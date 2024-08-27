@@ -11,7 +11,7 @@ const LandingPage = () => {
     <>
       <Menu />
 
-      <section id="contact" className="contact" style={{height:"100vh"}}>
+      <section id="contact" className="contact">
         <div className="container" data-aos="fade-up">
 
           <div className="section-header">
@@ -32,7 +32,7 @@ const LandingPage = () => {
                   </i>
                   <div>
                     <h4>Location:</h4>
-                    <p>University of Rwanda, Huye campus ! </p>
+                    <p>UTB university student, home kicukiro center! </p>
                   </div>
                 </div>
 
@@ -41,7 +41,7 @@ const LandingPage = () => {
 
                   <div>
                     <h4>Email:</h4>
-                    <p>cedrickhakuzimana@gmail.com</p>
+                    <p>shemalain@gmail.com</p>
                   </div>
                 </div>
 
@@ -50,7 +50,7 @@ const LandingPage = () => {
 
                   <div>
                     <h4>Call:</h4>
-                    <p>+250 784366616</p>
+                    <p>+250 0783 945 908</p>
                   </div>
                 </div>
 
@@ -58,17 +58,12 @@ const LandingPage = () => {
 
                   <div>
                     {/* <div id="my-map-canvas" style={{ height: '100%', width: '100%', maxWidth: '100%' }}> */}
-                    <iframe style={{ height: '100%', width: '100%', border: '0' }} frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=ur+huye&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                    <iframe style={{ height: '100%', width: '100%', border: '0' }} frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=UTB&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
                     {/* </div> */}
                   </div>
                 </div>
               </div>
 </div>
-
-{/* <div style="text-decoration:none; overflow:hidden;max-width:100%;width:500px;height:500px;">
-  <div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;">
-    <iframe style="height:100%;width:100%;border:0;" frameborder="0"
-     src="https://www.google.com/maps/embed/v1/place?q=ur+huye&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="from-embedmap-code" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="grab-map-data">premium bootstrap themes</a><style>#google-maps-canvas .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none;</style></div> */}
 
 {/* <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;">
   <div id="gmap-canvas" style="height:100%; width:100%;max-width:100%;">

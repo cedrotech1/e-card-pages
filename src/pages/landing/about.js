@@ -19,7 +19,7 @@ const LandingPage = () => {
                 Welcome to e-card management system
               </h2>
               <p style={{ marginBottom: '1cm', marginTop: '0cm', fontStyle: 'bold', fontFamily: 'monospace' }}>
-                Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.
+              Welcome to our innovative dining experience! Securely enjoy meals with your personalized card. Our automated system ensures convenience and effortless reporting. Bon appétit!
               </p>
               <div className="d-flex justify-content-center justify-content-lg-start">
                 <a href="register" className="btn-get-started" style={{ backgroundColor: '#faead1', borderRadius: '6px', fontFamily: 'monospace' }}>

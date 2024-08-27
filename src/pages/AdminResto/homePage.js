@@ -471,16 +471,16 @@ const Dashboard = () => {
                             <div className="row" style={{ paddingTop: '0cm' }}>
                               <div className="col-md-6 form-group">
                                 <span>First name</span>
-                                <input type="text" name="firstname" className="form-control" id="firstname" placeholder="Cedrick" onChange={handleChange} />
+                                <input type="text" name="firstname" className="form-control" id="firstname" placeholder="voltaire" onChange={handleChange} />
                               </div>
                               <div className="col-md-6 form-group mt-3 mt-md-0">
                                 <span>Last Name</span>
-                                <input type="text" className="form-control" name="lastname" id="lastname" placeholder="Hakuzimana" onChange={handleChange} />
+                                <input type="text" className="form-control" name="lastname" id="lastname" placeholder="Alain" onChange={handleChange} />
                               </div>
                             </div>
                             <div className="form-group mt-3">
                               <span>Email</span>
-                              <input type="text" className="form-control" name="email" id="email" placeholder="cedrick@gmail.com" onChange={handleChange} />
+                              <input type="text" className="form-control" name="email" id="email" placeholder="voltaire@gmail.com" onChange={handleChange} />
                             </div>
                             <div className="form-group mt-3">
                               <span>Phone</span>
@@ -581,14 +581,14 @@ const Dashboard = () => {
                             <div className="row" style={{ paddingTop: '0cm' }}>
                               <div className="col-md-6 form-group">
                                 <span>First name</span>
-                                <input type="text" name="firstname" className="form-control" id="firstname" placeholder="Cedrick"
+                                <input type="text" name="firstname" className="form-control" id="firstname" placeholder="voltaire"
                                   value={selectedUser.firstname}
                                   onChange={(e) => setSelectedUser({ ...selectedUser, firstname: e.target.value })}
                                 />
                               </div>
                               <div className="col-md-6 form-group mt-3 mt-md-0">
                                 <span>Last Name</span>
-                                <input type="text" className="form-control" name="lastname" id="lastname" placeholder="Hakuzimana"
+                                <input type="text" className="form-control" name="lastname" id="lastname" placeholder="alin"
                                   value={selectedUser.lastname}
                                   onChange={(e) => setSelectedUser({ ...selectedUser, lastname: e.target.value })}
 
@@ -597,7 +597,7 @@ const Dashboard = () => {
                             </div>
                             <div className="form-group mt-3">
                               <span>Email</span>
-                              <input type="text" className="form-control" name="email" id="email" placeholder="cedrick@gmail.com"
+                              <input type="text" className="form-control" name="email" id="email" placeholder="voltaire@gmail.com"
                                 value={selectedUser.email}
                                 onChange={(e) => setSelectedUser({ ...selectedUser, email: e.target.value })}
 
